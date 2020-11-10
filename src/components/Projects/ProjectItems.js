@@ -1,6 +1,6 @@
 import shattered from "../../assets/images/Shattered.png";
 import personalWebsite from "../../assets/images/PersonalWebsite.png";
-import ohmygacha from "../../assets/images/ohmygacha.png";
+import gachatool from "../../assets/images/gachatool.png";
 import storyagora from "../../assets/images/storyagora.png";
 
 export const ProjectItems = [
@@ -19,7 +19,7 @@ export const ProjectItems = [
     title: "Oh My Gacha!",
     subtitle:
       "A web tool inspired by lootbox-based game systems that calculates how much money could potentially be needed to chase after a rare item.",
-    img: ohmygacha,
+    img: gachatool,
     tech: ["Spring Boot", "Bootstrap 4", "HTML", "CSS", "Java", "AWS"],
     github: "https://github.com/lptome/oh-my-gacha",
     live: "https://ohmygacha.luistome.net/",
