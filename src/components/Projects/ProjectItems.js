@@ -1,6 +1,6 @@
 import shattered from "../../assets/images/Shattered.png";
 import personalWebsite from "../../assets/images/PersonalWebsite.png";
-import ohmygacha from "../../assets/images/ohmygacha.PNG";
+import ohmygacha from "../../assets/images/ohmygacha.png";
 import storyagora from "../../assets/images/storyagora.png";
 
 export const ProjectItems = [
