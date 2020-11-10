@@ -1,6 +1,6 @@
 import shattered from "../../assets/images/Shattered.png";
 import personalWebsite from "../../assets/images/PersonalWebsite.png";
-import ohmygacha from "../../assets/images/ohmygacha.PNG";
+import ohmygacha from "../../assets/images/ohmygacha.png";
 import storyagora from "../../assets/images/storyagora.png";
 
 export const ProjectItems = [
@@ -11,7 +11,7 @@ export const ProjectItems = [
       "A website where users can read and share their own short stories.",
     img: storyagora,
     tech: ["Spring Boot", "Bootstrap 4", "HTML", "CSS", "AWS", "MySQL"],
-    github: "https://github.com/lptome/Library-Management-Application",
+    github: "https://github.com/lptome/portfolio-website",
     live: "https://storyagora.luistome.net",
   },
   {
@@ -29,7 +29,7 @@ export const ProjectItems = [
     title: "Personal Website",
     subtitle: "The website you are currently using, created with React.",
     img: personalWebsite,
-    tech: ["React", "Node.js", "Express", "HTML", "CSS", "JavaScript"],
+    tech: ["React", "Node.js", "HTML", "CSS", "JavaScript"],
     live: "https://luistome.net/",
   },
   {

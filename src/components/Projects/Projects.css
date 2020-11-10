@@ -99,6 +99,10 @@
   transition: transform 0.25s;
 }
 
+.image-overlay .image-overlay-content {
+  transform: translateY(0) !important;
+}
+
 .image-overlay:hover {
   opacity: 1;
 }
@@ -113,6 +117,7 @@
 
 .image-overlay-content {
   display: flex;
+  position: absolute;
   flex-direction: column;
   justify-content: center;
   width: 100%;
