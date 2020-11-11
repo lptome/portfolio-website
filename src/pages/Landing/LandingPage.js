@@ -4,9 +4,7 @@ import {
   PageVariants,
   PageTransitions,
   FadeIn,
-  Scale,
   ComeUp,
-  ComeDown,
 } from "./../../framer-motion/PageVariants";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { motion } from "framer-motion";

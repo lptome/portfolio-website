@@ -57,6 +57,11 @@ export const PageTransitions = {
     delayChildren: 0.5,
     staggerChildren: 0.5,
   },
+  about: {
+    duration: 1,
+    delayChildre: 1,
+    staggerChildren: 0.5,
+  },
 };
 
 export const FadeIn = {

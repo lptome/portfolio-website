@@ -30,6 +30,7 @@ export const ProjectItems = [
     subtitle: "The website you are currently using, created with React.",
     img: personalWebsite,
     tech: ["React", "Node.js", "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/lptome/portfolio-website",
     live: "https://luistome.net/",
   },
   {

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import {
   PageVariants,
   PageTransitions,
+  FadeIn,
 } from "../../framer-motion/PageVariants";
 
 import Title from "./../../components/Title/Title";
@@ -34,16 +35,16 @@ class AboutPage extends React.Component {
       <div>
         <div className="navbar"></div>
         <motion.div
-          initial={PageVariants.initial}
-          exit={PageVariants.out}
-          animate={PageVariants.in}
+          initial="initial"
+          exit="out"
+          animate="in"
           variants={PageVariants}
-          transition={PageTransitions}
+          transition={PageTransitions.about}
           className="content"
         >
           <Title title={this.state.title} />
           <div className="about-content">
-            <div className="about-profile">
+            <motion.div variants={PageVariants} className="about-profile">
               <p>
                 My name is Luis, I'm a Full-Stack Web Developer based in London.
               </p>
@@ -59,9 +60,9 @@ class AboutPage extends React.Component {
                 new things and exploring other areas in Computing, from Game
                 Development to Security.
               </p>
-            </div>
-            <div className="about-stack">
-              <p>Here are some of the technologies I use (almost) every day:</p>
+            </motion.div>
+            <motion.div variants={PageVariants} className="about-stack">
+              <p>Here are some the technologies I love:</p>
               <div className="about-skills-wrapper">
                 <div className="about-skills">
                   {this.state.skills.map((skill, index) => {
@@ -69,7 +70,7 @@ class AboutPage extends React.Component {
                   })}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
