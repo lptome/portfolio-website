@@ -20,16 +20,16 @@ function LandingPage(props) {
       className="land-page"
     >
       <div className="land-message-wrapper">
-        <motion.div
-          variants={FadeIn}
-          transition={{ duration: 1 }}
-          className="land-message"
-        >
-          <h2 style={{ color: "#0064c8" }}>Hi, I'm Luis, </h2>
-          <h1>
-            I'm a Full-Stack <br></br>Software Developer
-          </h1>
-        </motion.div>
+        <div className="land-message">
+          <motion.div variants={FadeIn} transition={{ duration: 1 }}>
+            <h1 className="land-name">Hi, I'm Luis, </h1>
+          </motion.div>
+          <motion.div variants={FadeIn} transition={{ duration: 1 }}>
+            <h1 className="land-job">
+              I'm a Full-Stack Software <br></br> Developer
+            </h1>
+          </motion.div>
+        </div>
         <motion.div
           variants={ComeUp}
           whileHover={{
