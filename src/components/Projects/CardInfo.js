@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 
 function CardInfo(props) {
   return (
-    <Col md={12} xl={5} className="card-info-wrapper">
+    <Col md={12} xl={6} className="card-info-wrapper">
       <div className="card-info">
         <h1 className="card-title">Summary</h1>
         <div className="triangle-container">

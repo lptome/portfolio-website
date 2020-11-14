@@ -28,15 +28,14 @@ class PortfolioPage extends React.Component {
         transitions={PageTransitions.portfolio}
       >
         <Title title={this.state.title} />
-        <Row className="mt-4 justify-content-center">
-          <Col
-            xs={12}
-            className="portfolio-subtitle d-flex justify-content-center"
-          >
-            <p>Here are some projects I've worked on recently:</p>
-          </Col>
-        </Row>
         <div className="portfolio">
+          <Row className="portfolio-subtitle mt-4 d-flex justify-content-center">
+            <Col xs={12} className="text-center">
+              <p style={{ fontSize: "1.5em" }}>
+                Here are some projects I've worked on recently:
+              </p>
+            </Col>
+          </Row>
           <Projects />
         </div>
       </motion.div>

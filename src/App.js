@@ -27,14 +27,16 @@ function App(props) {
       <div className="Navbar">
         <NavigationBar location={location.pathname} />
       </div>
-      <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
-          <Route path="/" exact render={() => <LandingPage />} />
-          <Route path="/about" exact render={() => <AboutPage />} />
-          <Route path="/portfolio" exact render={() => <PortfolioPage />} />
-          <Route path="/contact" exact render={() => <ContactPage />} />
-        </Switch>
-      </AnimatePresence>
+      <Container>
+        <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.pathname}>
+            <Route path="/" exact render={() => <LandingPage />} />
+            <Route path="/about" exact render={() => <AboutPage />} />
+            <Route path="/portfolio" exact render={() => <PortfolioPage />} />
+            <Route path="/contact" exact render={() => <ContactPage />} />
+          </Switch>
+        </AnimatePresence>
+      </Container>
     </div>
   );
 }

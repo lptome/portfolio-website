@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ComeDown, PageTransitions } from "../../framer-motion/PageVariants";
 import "./ContactPage.css";
 
-import { Row, Col } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
 
 export default class Form extends React.Component {
   constructor(props) {

@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 
 function CardImage(props) {
   return (
-    <Col md={12} xl={5} className="card-image">
+    <Col md={12} xl={6} className="card-image">
       <div className="image-container">
         <a
           className="box-link"

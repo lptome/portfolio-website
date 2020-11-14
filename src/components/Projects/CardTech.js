@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 
 function CardTech(props) {
   return (
-    <Col md={12} lg={4} className="d-flex justify-content-center">
+    <Col md={12} lg={6} className="d-flex justify-content-center">
       <div className="tech-stack">
         <h3 className="tech-title">Technologies</h3>
         <ul className="tech-list">

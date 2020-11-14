@@ -46,7 +46,7 @@ class AboutPage extends React.Component {
           <Title title={this.state.title} />
           <div className="about-content">
             <Row className="d-flex justify-content-center">
-              <Col md={12} lg={6}>
+              <Col md={12} lg={8}>
                 <motion.div variants={PageVariants} className="about-profile">
                   <p>
                     My name is Luis, I'm a Full-Stack Web Developer based in
