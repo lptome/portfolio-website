@@ -28,11 +28,12 @@ class PortfolioPage extends React.Component {
         transitions={PageTransitions.portfolio}
       >
         <Title title={this.state.title} />
-        <Row className="d-flex mt-4 justify-content-center">
-          <Col xs={12} className="d-flex justify-content-center">
-            <p style={{ fontSize: "1.5em", textAlign: "center" }}>
-              Here are some projects I've worked on recently:
-            </p>
+        <Row className="mt-4 justify-content-center">
+          <Col
+            xs={12}
+            className="portfolio-subtitle d-flex justify-content-center"
+          >
+            <p>Here are some projects I've worked on recently:</p>
           </Col>
         </Row>
         <div className="portfolio">

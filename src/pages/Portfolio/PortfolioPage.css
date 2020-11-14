@@ -5,3 +5,9 @@
   margin-bottom: 2em;
   align-items: center;
 }
+
+.portfolio-subtitle {
+  max-width: 90vw;
+  font-size: 1.5em;
+  text-align: center;
+}

@@ -38,7 +38,9 @@ function Projects() {
           <CardInfo item={item[0]} />
           <CardTech item={item[0]} />
         </Row>
-        <hr className="separator"></hr>
+        <Row>
+          <hr className="separator"></hr>
+        </Row>
       </motion.div>
       <motion.div
         variants={ComeDown}
@@ -53,7 +55,9 @@ function Projects() {
           <CardInfo item={item[1]} />
           <CardTech item={item[1]} />
         </Row>
-        <hr className="separator"></hr>
+        <Row>
+          <hr className="separator"></hr>
+        </Row>
       </motion.div>
       <motion.div
         variants={ComeDown}
@@ -68,7 +72,9 @@ function Projects() {
           <CardInfo item={item[2]} />
           <CardTech item={item[2]} />
         </Row>
-        <hr className="separator"></hr>
+        <Row>
+          <hr className="separator"></hr>
+        </Row>
       </motion.div>
       <motion.div
         variants={ComeDown}
