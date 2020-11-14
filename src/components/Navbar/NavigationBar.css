@@ -1,3 +1,16 @@
+.navbar {
+  z-index: 10;
+  transition: 1s;
+}
+
+.navbar-toggler {
+  opacity: 1;
+}
+
+.navbar-toggler button {
+  border-color: rgba(255, 255, 255, 1);
+}
+
 .NavbarItems {
   /*disables text selection */
   user-select: none; /* supported by Chrome and Opera */
@@ -5,16 +18,14 @@
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  transition: 1s;
-  padding: 0.5em;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  background: rgb(20, 20, 20);
 }
 
 .NavbarItems a {
-  padding: 2em;
+  padding: 1em 2em 1em 2em;
   font-size: 1rem;
-  text-decoration: none;
+  text-decoration: none !important;
   background: linear-gradient(to right, #fff 50%, #0064c8 50%);
   background-size: 200%;
   background-clip: text;
@@ -28,20 +39,10 @@
 
 .logo {
   text-decoration: none;
-  width: 30%;
 }
 
 .logo a {
+  margin-left: 1rem;
+  padding: 0;
   font-size: 2rem;
-}
-
-.nav-menu {
-  margin-right: 5rem;
-  width: 100%;
-  position: relative;
-  display: grid;
-  text-align: center;
-  justify-content: end;
-  grid-template-columns: repeat(5, auto);
-  list-style: none;
 }

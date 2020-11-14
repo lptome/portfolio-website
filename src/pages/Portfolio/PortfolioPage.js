@@ -9,6 +9,8 @@ import {
 
 import "./PortfolioPage.css";
 
+import { Row, Col } from "react-bootstrap";
+
 class PortfolioPage extends React.Component {
   constructor(props) {
     super(props);
@@ -25,8 +27,14 @@ class PortfolioPage extends React.Component {
         animate="in"
         transitions={PageTransitions.portfolio}
       >
-        <div className="navbar"></div>
         <Title title={this.state.title} />
+        <Row className="d-flex mt-4 justify-content-center">
+          <Col xs={12} className="d-flex justify-content-center">
+            <p style={{ fontSize: "1.5em", textAlign: "center" }}>
+              Here are some projects I've worked on recently:
+            </p>
+          </Col>
+        </Row>
         <div className="portfolio">
           <Projects />
         </div>

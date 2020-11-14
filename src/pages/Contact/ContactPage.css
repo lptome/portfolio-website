@@ -16,11 +16,6 @@
   text-decoration: none;
 }
 
-.contact-button {
-  text-align: center;
-  margin: 2em;
-}
-
 .contact-button button {
   margin-top: 1em;
   color: #0064c8;
@@ -35,7 +30,7 @@
   border-top-left-radius: 3px;
   font-size: 1.5em;
   cursor: pointer;
-  padding: 0.2em 2em 0.2em 2em;
+  padding: 0 1em 0 1em;
 }
 
 .contact-button button:hover {
@@ -51,36 +46,37 @@
   background: black;
 }
 .input-group {
+  margin: 1em 0 1em 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .input-group textarea {
   resize: none;
-  padding: 1.5rem 1rem 2rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   font-size: 1em;
 }
 
 .contact-form {
-  min-width: 33vw;
-  max-width: 33vw;
+  min-width: 30vw;
 }
 
 .input {
+  width: 100%;
   font-size: 1.2rem;
   font-family: Arial, Helvetica, sans-serif !important;
   border: 1px solid 707070;
   min-height: 3.5rem;
   user-select: auto;
-  margin: 0.5rem;
   padding-left: 1rem;
 }
 
 label {
+  transform: translate(1em, 1em);
   pointer-events: none;
   position: absolute;
   color: #999;
-  transform: translate(1.5rem, 1.75rem);
   transition: all 0.2s ease-out;
 }
 
@@ -95,14 +91,14 @@ textarea:focus {
 }
 input:focus + label {
   color: #0064c8;
-  transform: translate(1.2rem, 0.75rem);
+  transform: translate(1rem, 0.25rem);
   font-size: 0.7rem;
   text-transform: uppercase;
 }
 
 textarea:focus + label {
   color: #0064c8;
-  transform: translate(1.2rem, 0.75rem);
+  transform: translate(1rem, 0.25rem);
   font-size: 0.7rem;
   text-transform: uppercase;
 }

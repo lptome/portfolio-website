@@ -1,7 +1,14 @@
+.land-page-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 .land-page {
   top: 0;
   height: 100vh;
-  position: relative;
 }
 
 .land-page::before {
@@ -11,14 +18,14 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   background-image: url("./../../assets/images/banner-image.jpg");
   background-size: cover;
   filter: grayscale(100%) contrast(1.2) brightness(0.15);
 }
 
 .land-page > * {
-  z-index: 10;
+  z-index: 5;
   position: absolute;
 }
 
@@ -35,9 +42,8 @@
 }
 
 .land-message {
+  margin-top: 5em;
   text-align: left;
-  padding: 1rem;
-  margin-bottom: 1em;
 }
 
 .land-message h1 {
@@ -47,20 +53,22 @@
 
 .land-name {
   color: #0064c8;
-  font-size: 4em;
+  font-size: calc(100% + 2vw + 2vh);
 }
 
 .land-job {
-  font-size: 1em;
+  font-size: calc(100% + 1vw + 1vh);
   text-align: center;
 }
 
 .land-button {
+  margin-top: 1em;
   border-radius: 0.2em;
   background: #0064c8;
   transition: all 300ms ease-in-out;
   will-change: transform;
   margin-bottom: 8em;
+  padding: 0 0.5em 0 0.5em;
 }
 
 .land-button:hover {
@@ -69,10 +77,15 @@
 }
 
 .land-button a {
+  text-decoration: none !important;
   padding: 0.8em;
   display: block;
   color: rgb(20, 20, 20);
   font-size: 0.7em;
   font-weight: bold;
   text-decoration: none;
+}
+
+.land-button a:hover {
+  color: rgb(20, 20, 20) !important;
 }

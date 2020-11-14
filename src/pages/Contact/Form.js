@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { ComeDown, PageTransitions } from "../../framer-motion/PageVariants";
 import "./ContactPage.css";
 
+import { Row, Col } from "react-bootstrap";
+
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +35,7 @@ export default class Form extends React.Component {
       label.style =
         "color: #0064c8; " +
         "border-color: #0064c8; " +
-        "transform: translate(1.2rem, 0.75rem); " +
+        "transform: translate(1rem, 0.25rem); " +
         "font-size: 0.7rem; " +
         "text-transform: uppercase";
     } else {
@@ -54,71 +56,79 @@ export default class Form extends React.Component {
           transition={PageTransitions.down}
           className="input-group"
         >
-          <input
-            required
-            className="input"
-            type="text"
-            value={this.state.name}
-            name="name"
-            onChange={this.handleChange}
-          ></input>
-          <label for="name" id="nameLabel">
-            Full Name
-          </label>
+          <Row>
+            <input
+              required
+              className="input"
+              type="text"
+              value={this.state.name}
+              name="name"
+              onChange={this.handleChange}
+            ></input>
+            <label for="name" id="nameLabel">
+              Full Name
+            </label>
+          </Row>
         </motion.div>
         <motion.div
           variants={ComeDown}
           transition={PageTransitions.down}
           className="input-group"
         >
-          <input
-            required
-            className="input"
-            value={this.state.email}
-            name="email"
-            onChange={this.handleChange}
-            type="email"
-          ></input>
-          <label for="email" id="emailLabel">
-            Email Address
-          </label>
+          <Row>
+            <input
+              required
+              className="input"
+              value={this.state.email}
+              name="email"
+              onChange={this.handleChange}
+              type="email"
+            ></input>
+            <label for="email" id="emailLabel">
+              Email Address
+            </label>
+          </Row>
         </motion.div>
         <motion.div
           variants={ComeDown}
           transition={PageTransitions.down}
           className="input-group"
         >
-          <textarea
-            required
-            rows="10"
-            cols="50"
-            className="input"
-            value={this.state.message}
-            name="message"
-            onChange={this.handleChange}
-          ></textarea>
-          <label for="message" id="messageLabel">
-            Your Message
-          </label>
-          <div id="char-limit">0/1000</div>
+          <Row>
+            <textarea
+              required
+              rows="10"
+              cols="50"
+              className="input"
+              value={this.state.message}
+              name="message"
+              onChange={this.handleChange}
+            ></textarea>
+            <label for="message" id="messageLabel">
+              Your Message
+            </label>
+            <div id="char-limit">0/1000</div>
+          </Row>
         </motion.div>
         <motion.div
           variants={ComeDown}
           transition={PageTransitions.down}
           className="contact-button"
         >
-          {status === "SUCCESS" ? (
-            <p>Thank you, I'll be in touch soon.</p>
-          ) : (
-            <button>SEND</button>
-          )}
-          {status === "ERROR" && (
-            <p>
-              Sorry, something went wrong, please try again later.
-              Alternatively, you may contact me directly through my{" "}
-              <a href="mailto:message@luistome.net">email address.</a>
-            </p>
-          )}
+          <Row className="d-flex justify-content-center">
+            {status === "SUCCESS" ? (
+              <p>Thank you, I'll be in touch soon.</p>
+            ) : (
+              <button>SEND</button>
+            )}
+            {status === "ERROR" && (
+              <p>
+                Sorry, something went wrong, please try again later.
+                Alternatively, you may contact me directly through my{" "}
+                <a href="mailto:message@luistome.net">email address.</a>
+              </p>
+            )}
+          </Row>
         </motion.div>
       </form>
     );

@@ -1,26 +1,19 @@
 .about-content {
-  display: flex;
+  margin-top: 5em;
   text-align: center;
-  width: 100%;
 }
 
 .about-title {
   font-size: 1.5em;
 }
 
-.about-profile {
-  padding: 2em;
-  margin-left: 5em;
-  width: 50%;
-}
 .about-profile p {
   text-align: left;
   font-family: "Noto Sans", sans-serif;
-  font-size: 1.2em;
+  font-size: calc(1em + 0.2vw);
 }
 
 .about-stack {
-  width: 40%;
   justify-content: center;
   text-align: center;
   list-style: none;
@@ -37,7 +30,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 60%;
 }
 
 .about-skills li {

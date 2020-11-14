@@ -1,28 +1,22 @@
 import React from "react";
 
+import Col from "react-bootstrap/Col";
+
 function CardImage(props) {
   return (
-    <div className="image-container">
-      <div className="image-overlay">
-        <h2 className="tech-title">TECHNOLOGIES</h2>
+    <Col md={12} xl={5} className="card-image">
+      <div className="image-container">
         <a
-          className="image-overlay-content"
+          className="box-link"
           href={props.item.live}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="box-link"></span>
+          <span className="box-link-span"></span>
         </a>
-        <div className="tech">
-          <ul className="tech-list">
-            {props.item.tech.map((tech, j) => (
-              <li>{tech}</li>
-            ))}
-          </ul>
-        </div>
+        <img src={props.item.img} alt={props.item.title}></img>
       </div>
-      <img src={props.item.img} alt={props.item.title}></img>
-    </div>
+    </Col>
   );
 }
 
