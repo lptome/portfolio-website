@@ -3,12 +3,8 @@
   transition: 1s;
 }
 
-.navbar-toggler {
-  opacity: 1;
-}
-
-.navbar-toggler button {
-  border-color: rgba(255, 255, 255, 1);
+.nav-item {
+  padding: 1em 0 1em 0;
 }
 
 .NavbarItems {
@@ -23,7 +19,7 @@
 }
 
 .NavbarItems a {
-  padding: 1em 2em 1em 2em;
+  padding: 0 2em 0 2em;
   font-size: 1rem;
   text-decoration: none !important;
   background: linear-gradient(to right, #fff 50%, #0064c8 50%);
@@ -41,11 +37,6 @@ a.navbar-brand {
   font-size: 1.2rem;
 }
 
-.logo {
-  text-decoration: none;
-}
-
 .logo a {
-  margin-left: 1rem;
   padding: 0;
 }

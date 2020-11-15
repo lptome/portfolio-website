@@ -24,14 +24,13 @@ function NavigationBar(props) {
     >
       <nav
         className="navbar navbar-expand-lg navbar-dark NavbarItems"
-        expand="lg"
         style={{ display: checkLocation(props.location) }}
       >
-        <a className="navbar-brand logo" href="/">
+        <a className="navbar-brand" href="/">
           LUIS TOME
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -41,16 +40,21 @@ function NavigationBar(props) {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbar-toggle">
-          <div className="navbar-nav ml-auto">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto">
             {MenuItems.map((item, index) => {
               return (
-                <Link className={item.type + " " + item.cName} to={item.url}>
-                  {item.title}
-                </Link>
+                <li className="nav-item active">
+                  <Link
+                    className={"nav-link" + item.type + " " + item.cName}
+                    to={item.url}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
               );
             })}
-          </div>
+          </ul>
         </div>
       </nav>
     </motion.div>
