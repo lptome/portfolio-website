@@ -9,8 +9,6 @@ import {
 import Title from "./../../components/Title/Title";
 import "./AboutPage.css";
 
-import { Row, Col } from "react-bootstrap";
-
 class AboutPage extends React.Component {
   constructor(props) {
     super(props);
@@ -45,8 +43,8 @@ class AboutPage extends React.Component {
         >
           <Title title={this.state.title} />
           <div className="about-content">
-            <Row className="d-flex justify-content-center">
-              <Col md={12} lg={8}>
+            <div className="row d-flex justify-content-center">
+              <div className="col-md-12 col-lg-8">
                 <motion.div variants={PageVariants} className="about-profile">
                   <p>
                     My name is Luis, I'm a Full-Stack Web Developer based in
@@ -65,8 +63,8 @@ class AboutPage extends React.Component {
                     from Game Development to Security.
                   </p>
                 </motion.div>
-              </Col>
-              <Col md={12} lg={4} className="d-flex">
+              </div>
+              <div className="col-md-12 col-lg-4 d-flex">
                 <motion.div variants={PageVariants} className="about-stack">
                   <p>Here are some of the technologies I love:</p>
                   <div className="about-skills-wrapper">
@@ -77,8 +75,8 @@ class AboutPage extends React.Component {
                     </div>
                   </div>
                 </motion.div>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

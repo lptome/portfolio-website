@@ -9,8 +9,6 @@ import {
 
 import "./PortfolioPage.css";
 
-import { Row, Col } from "react-bootstrap";
-
 class PortfolioPage extends React.Component {
   constructor(props) {
     super(props);
@@ -29,13 +27,13 @@ class PortfolioPage extends React.Component {
       >
         <Title title={this.state.title} />
         <div className="portfolio">
-          <Row className="portfolio-subtitle mt-4 d-flex justify-content-center">
-            <Col xs={12} className="text-center">
+          <div className="row portfolio-subtitle mt-4 d-flex justify-content-center">
+            <div className="col-12 text-center">
               <p style={{ fontSize: "1.5em" }}>
                 Here are some projects I've worked on recently:
               </p>
-            </Col>
-          </Row>
+            </div>
+          </div>
           <Projects />
         </div>
       </motion.div>

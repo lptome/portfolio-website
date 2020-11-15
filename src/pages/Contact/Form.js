@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { ComeDown, PageTransitions } from "../../framer-motion/PageVariants";
 import "./ContactPage.css";
 
-import Row from "react-bootstrap/Row";
-
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +54,7 @@ export default class Form extends React.Component {
           transition={PageTransitions.down}
           className="input-group"
         >
-          <Row>
+          <div className="row">
             <input
               required
               className="input"
@@ -68,14 +66,14 @@ export default class Form extends React.Component {
             <label for="name" id="nameLabel">
               Full Name
             </label>
-          </Row>
+          </div>
         </motion.div>
         <motion.div
           variants={ComeDown}
           transition={PageTransitions.down}
           className="input-group"
         >
-          <Row>
+          <div className="row">
             <input
               required
               className="input"
@@ -87,14 +85,14 @@ export default class Form extends React.Component {
             <label for="email" id="emailLabel">
               Email Address
             </label>
-          </Row>
+          </div>
         </motion.div>
         <motion.div
           variants={ComeDown}
           transition={PageTransitions.down}
           className="input-group"
         >
-          <Row>
+          <div className="row">
             <textarea
               required
               rows="10"
@@ -108,14 +106,14 @@ export default class Form extends React.Component {
               Your Message
             </label>
             <div id="char-limit">0/1000</div>
-          </Row>
+          </div>
         </motion.div>
         <motion.div
           variants={ComeDown}
           transition={PageTransitions.down}
           className="contact-button"
         >
-          <Row className="d-flex justify-content-center">
+          <div className="row d-flex justify-content-center">
             {status === "SUCCESS" ? (
               <p>Thank you, I'll be in touch soon.</p>
             ) : (
@@ -128,7 +126,7 @@ export default class Form extends React.Component {
                 <a href="mailto:message@luistome.net">email address.</a>
               </p>
             )}
-          </Row>
+          </div>
         </motion.div>
       </form>
     );

@@ -37,6 +37,10 @@
   background-position: -100%;
 }
 
+a.navbar-brand {
+  font-size: 1.2rem;
+}
+
 .logo {
   text-decoration: none;
 }
@@ -44,5 +48,4 @@
 .logo a {
   margin-left: 1rem;
   padding: 0;
-  font-size: 2rem;
 }

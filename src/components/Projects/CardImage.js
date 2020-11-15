@@ -1,10 +1,8 @@
 import React from "react";
 
-import Col from "react-bootstrap/Col";
-
 function CardImage(props) {
   return (
-    <Col md={12} xl={6} className="card-image">
+    <div className="col-md-12 col-xl-6 card-image">
       <div className="image-container">
         <a
           className="box-link"
@@ -16,7 +14,7 @@ function CardImage(props) {
         </a>
         <img src={props.item.img} alt={props.item.title}></img>
       </div>
-    </Col>
+    </div>
   );
 }
 

@@ -6,9 +6,6 @@ import { FadeIn } from "../../framer-motion/PageVariants";
 
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-
 function checkLocation(location) {
   if (location === "/") {
     return "none";
@@ -25,17 +22,27 @@ function NavigationBar(props) {
       animate="in"
       transition={{ delay: 0.5 }}
     >
-      <Navbar
-        className="NavbarItems"
+      <nav
+        className="navbar navbar-expand-lg navbar-dark NavbarItems"
         expand="lg"
         style={{ display: checkLocation(props.location) }}
       >
-        <Navbar.Brand className="logo">
-          <a href="/">LUIS TOME</a>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbar-toggle" className="navbar-dark" />
-        <Navbar.Collapse id="navbar-toggle">
-          <Nav className="navbar-nav ml-auto">
+        <a className="navbar-brand logo" href="/">
+          LUIS TOME
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbar-toggle">
+          <div className="navbar-nav ml-auto">
             {MenuItems.map((item, index) => {
               return (
                 <Link className={item.type + " " + item.cName} to={item.url}>
@@ -43,9 +50,9 @@ function NavigationBar(props) {
                 </Link>
               );
             })}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+          </div>
+        </div>
+      </nav>
     </motion.div>
   );
 }

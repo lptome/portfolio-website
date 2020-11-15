@@ -1,10 +1,8 @@
 import React from "react";
 
-import Col from "react-bootstrap/Col";
-
 function CardTech(props) {
   return (
-    <Col md={12} lg={6} className="d-flex justify-content-center">
+    <div className="col-md-12 col-lg-6 d-flex justify-content-center">
       <div className="tech-stack">
         <h3 className="tech-title">Technologies</h3>
         <ul className="tech-list">
@@ -13,7 +11,7 @@ function CardTech(props) {
           ))}
         </ul>
       </div>
-    </Col>
+    </div>
   );
 }
 

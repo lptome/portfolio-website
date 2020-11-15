@@ -14,11 +14,7 @@ import AboutPage from "./pages/About/AboutPage";
 import PortfolioPage from "./pages/Portfolio/PortfolioPage";
 import ContactPage from "./pages/Contact/ContactPage";
 
-import { Row, Col, Button } from "react-bootstrap";
-
 import "./App.css";
-
-import Container from "react-bootstrap/Container";
 
 function App(props) {
   const location = useLocation();
@@ -27,7 +23,7 @@ function App(props) {
       <div className="Navbar">
         <NavigationBar location={location.pathname} />
       </div>
-      <Container>
+      <div className="container">
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
             <Route path="/" exact render={() => <LandingPage />} />
@@ -36,7 +32,7 @@ function App(props) {
             <Route path="/contact" exact render={() => <ContactPage />} />
           </Switch>
         </AnimatePresence>
-      </Container>
+      </div>
     </div>
   );
 }
