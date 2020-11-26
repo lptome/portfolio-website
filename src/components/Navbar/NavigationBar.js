@@ -66,11 +66,11 @@ function NavigationBar(props) {
                 GITHUB
               </a>
             </li>
-            <li className="nav-item active">
+            {/* <li className="nav-item active">
               <a href={CV} target="_blank" rel="noreferrer">
                 DOWNLOAD CV
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
