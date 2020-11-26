@@ -3,8 +3,9 @@ import { MenuItems } from "./MenuItems.js";
 import "./NavigationBar.css";
 import { motion } from "framer-motion";
 import { FadeIn } from "../../framer-motion/PageVariants";
-
 import { BrowserRouter as Router, Link } from "react-router-dom";
+
+import CV from "../../assets/files/luis_tome_cv.pdf";
 
 function checkLocation(location) {
   if (location === "/") {
@@ -42,6 +43,7 @@ function NavigationBar(props) {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
+            {/* NavLinks to pages within website  */}
             {MenuItems.map((item, index) => {
               return (
                 <li className="nav-item active">
@@ -54,6 +56,21 @@ function NavigationBar(props) {
                 </li>
               );
             })}
+            {/* External Links */}
+            <li className="nav-item active">
+              <a
+                href="https://www.github.com/lptome"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GITHUB
+              </a>
+            </li>
+            <li className="nav-item active">
+              <a href={CV} target="_blank" rel="noreferrer">
+                DOWNLOAD CV
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
