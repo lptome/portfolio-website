@@ -7,7 +7,6 @@ import {
 } from "../../framer-motion/PageVariants";
 
 import Title from "./../../components/Title/Title";
-import "./AboutPage.css";
 
 class AboutPage extends React.Component {
   constructor(props) {

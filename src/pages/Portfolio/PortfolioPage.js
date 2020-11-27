@@ -7,8 +7,6 @@ import {
   PageTransitions,
 } from "../../framer-motion/PageVariants";
 
-import "./PortfolioPage.css";
-
 class PortfolioPage extends React.Component {
   constructor(props) {
     super(props);

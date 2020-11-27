@@ -8,7 +8,6 @@ import {
 
 import Title from "./../../components/Title/Title";
 import Form from "./../Contact/Form";
-import "./ContactPage.css";
 
 class ContactPage extends React.Component {
   constructor(props) {

@@ -1,6 +1,5 @@
 import React, { Component, useContext } from "react";
 import { MenuItems } from "./MenuItems.js";
-import "./NavigationBar.css";
 import { motion } from "framer-motion";
 import { FadeIn } from "../../framer-motion/PageVariants";
 import { BrowserRouter as Router, Link } from "react-router-dom";

@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FadeIn, Scale } from "./../../framer-motion/PageVariants";
-import "./Title.css";
 
 function Title(props) {
   return (

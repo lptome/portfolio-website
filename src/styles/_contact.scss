@@ -10,10 +10,9 @@
   text-align: center;
   color: black;
   margin-bottom: 1em;
-}
-
-.contact-message a {
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
 }
 
 .contact-button button {
@@ -45,17 +44,18 @@
 .contact-button button:active {
   background: black;
 }
+
+//Input Fields & TextArea
 .input-group {
   margin: 1em 0 1em 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.input-group textarea {
-  resize: none;
-  padding: 1rem 1rem 2rem 1rem;
-  font-size: 1em;
+  textarea {
+    resize: none;
+    padding: 1rem 1rem 2rem 1rem;
+    font-size: 1em;
+  }
 }
 
 .contact-form {
@@ -106,14 +106,12 @@ textarea:focus + label {
 .email-message {
   transition: all 1s ease-in;
   text-align: center;
-}
-
-.email-message .error {
-  color: rgb(199, 7, 7);
-}
-
-.email-message .success {
-  color: rgb(12, 92, 16);
+  .error {
+    color: rgb(199, 7, 7);
+  }
+  .success {
+    color: rgb(12, 92, 16);
+  }
 }
 
 .alternate-contact {

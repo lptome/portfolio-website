@@ -14,7 +14,8 @@ import AboutPage from "./pages/About/AboutPage";
 import PortfolioPage from "./pages/Portfolio/PortfolioPage";
 import ContactPage from "./pages/Contact/ContactPage";
 
-import "./App.css";
+//Style
+import "./styles/style.css";
 
 function App(props) {
   const location = useLocation();

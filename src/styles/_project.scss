@@ -1,0 +1,101 @@
+.project-card {
+  padding: 2em 0 2em 0;
+  justify-content: center;
+  title {
+    margin-bottom: 2rem;
+  }
+}
+
+.card-image {
+  padding: 2em 0 2em 0;
+  .container {
+    padding: 0;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.box-link {
+  width: 100%;
+  height: 100%;
+  span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+//Project Description + Links
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  p {
+    font-size: calc(0.8rem + 0.2vw);
+  }
+  hr {
+    margin: 1rem 0 0.5rem 0;
+    border-top: 1px solid rgb(63, 63, 63);
+  }
+  .links {
+    justify-self: end;
+    font-size: calc(0.8rem + 0.2vw);
+    text-align: right;
+    margin-right: 2rem;
+    i {
+      margin: 0.5rem;
+      transition: 0.1s all ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+//Technologies used
+.tech {
+  justify-content: center;
+  .stack {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    .title {
+      color: black;
+    }
+    .list {
+      padding: 0;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      color: white;
+      li {
+        display: flex;
+        background: rgb(15, 15, 15);
+        color: #0064c8;
+        border-top: 1px solid #070707;
+        border-right: 1px solid #070707;
+        border-left: 1px solid #070707;
+        border-bottom: 3px solid #070707;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        font-size: calc(1rem + 0.2vw);
+        margin: 0.2em;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
