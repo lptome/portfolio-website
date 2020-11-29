@@ -20,7 +20,7 @@ export const ProjectItems = [
       "AWS",
       "MySQL",
     ],
-    github: "https://github.com/lptome/portfolio-website",
+    github: "https://github.com/lptome/story-agora",
     live: "https://storyagora.luistome.net",
   },
   {
