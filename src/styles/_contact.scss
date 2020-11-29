@@ -2,13 +2,12 @@
   padding: 1em;
   display: flex;
   flex-direction: column;
-  color: #ffffff;
   align-items: center;
 }
 
 .contact-message {
   text-align: center;
-  color: black;
+  color: $paragraphColor;
   margin-bottom: 1em;
   a {
     text-decoration: none;
@@ -30,19 +29,16 @@
   font-size: 1.5em;
   cursor: pointer;
   padding: 0 1em 0 1em;
-}
-
-.contact-button button:hover {
-  background: rgb(8, 8, 8);
-}
-
-.contact-button button:focus {
-  outline: none;
-  background: black;
-}
-
-.contact-button button:active {
-  background: black;
+  &:hover {
+    background: rgb(8, 8, 8);
+  }
+  &:focus {
+    outline: none;
+    background: black;
+  }
+  &:active {
+    background: black;
+  }
 }
 
 //Input Fields & TextArea
@@ -63,6 +59,7 @@
 }
 
 .input {
+  background: $secondaryBackground;
   width: 100%;
   font-size: 1.2rem;
   font-family: Arial, Helvetica, sans-serif !important;
@@ -76,18 +73,18 @@ label {
   transform: translate(1em, 1em);
   pointer-events: none;
   position: absolute;
-  color: #999;
+  color: $placeholderColor;
   transition: all 0.2s ease-out;
 }
 
 input:focus {
   outline: none;
-  border: 1px solid #0064c8;
+  border: 2px solid #0064c8;
 }
 
 textarea:focus {
   outline: none;
-  border: 1px solid #0064c8;
+  border: 2px solid #0064c8;
 }
 input:focus + label {
   color: #0064c8;
@@ -110,7 +107,7 @@ textarea:focus + label {
     color: rgb(199, 7, 7);
   }
   .success {
-    color: rgb(12, 92, 16);
+    color: $paragraphColor;
   }
 }
 

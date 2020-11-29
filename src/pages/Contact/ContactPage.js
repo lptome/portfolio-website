@@ -16,7 +16,7 @@ class ContactPage extends React.Component {
       name: "",
       email: "",
       message: "",
-      title: "CONTACT ME",
+      title: "Contact Me",
     };
   }
 

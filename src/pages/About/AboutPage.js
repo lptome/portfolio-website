@@ -12,7 +12,7 @@ class AboutPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "ABOUT ME",
+      title: "About Me",
       skills: [
         "Java",
         "C#",
@@ -38,13 +38,13 @@ class AboutPage extends React.Component {
           animate="in"
           variants={PageVariants}
           transition={PageTransitions.about}
-          className="content"
+          className="about"
         >
           <Title title={this.state.title} />
-          <div className="about-content">
+          <div className="content">
             <div className="row d-flex justify-content-center">
               <div className="col-md-12 col-lg-8">
-                <motion.div variants={PageVariants} className="about-profile">
+                <motion.div variants={PageVariants} className="profile">
                   <p>
                     My name is Luis, I'm a Full-Stack Web Developer based in
                     London.
@@ -64,10 +64,10 @@ class AboutPage extends React.Component {
                 </motion.div>
               </div>
               <div className="col-md-12 col-lg-4 d-flex">
-                <motion.div variants={PageVariants} className="about-stack">
+                <motion.div variants={PageVariants} className="stack">
                   <p>Here are some of the technologies I love:</p>
-                  <div className="about-skills-wrapper">
-                    <div className="about-skills">
+                  <div className="skill-list">
+                    <div className="skills">
                       {this.state.skills.map((skill, index) => {
                         return <li key={index}>{skill}</li>;
                       })}

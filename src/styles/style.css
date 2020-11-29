@@ -1,3 +1,11 @@
+html {
+  background: #2b2b38;
+}
+
+.App {
+  background: #2b2b38;
+}
+
 .navbar {
   z-index: 10;
   -webkit-transition: 1s;
@@ -65,21 +73,20 @@ a.navbar-brand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #000000;
-  font-size: 1.5em;
-  letter-spacing: -0.1em;
+  color: white;
+  font-size: 1.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .title h1 {
-  padding: 0;
+  padding: 0.2rem;
 }
 
-.title-hr {
+.title .title-hr {
   border-bottom: 2px solid #0064c8;
-  width: 50%;
+  width: 150%;
 }
 
 .project-card {
@@ -89,25 +96,61 @@ a.navbar-brand {
           justify-content: center;
 }
 
-.project-card title {
-  margin-bottom: 2rem;
+.card-image {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.card-image {
-  padding: 2em 0 2em 0;
+.card-image .project-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem;
+}
+
+.card-image .project-type span {
+  font-size: 1.2rem;
+  font-family: "Roboto-Sans", sans-serif;
+  padding: 0 1rem;
+  color: #0064c8;
+  background: #141414;
+  border-top: 1px solid #070707;
+  border-right: 1px solid #070707;
+  border-left: 1px solid #070707;
+  border-bottom: 3px solid #070707;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 .card-image .container {
-  padding: 0;
-  border: 1px solid black;
-  width: 100%;
-  height: 100%;
   position: relative;
+  padding: 0;
 }
 
 .card-image .container img {
+  border-radius: 0.5rem;
+  position: relative;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .card-image .container {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .box-link {
@@ -132,10 +175,14 @@ a.navbar-brand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: left;
+}
+
+.card-info .title {
+  display: inline;
+  font-family: "Lora", serif;
+  color: #1c91ff;
+  font-weight: 600;
 }
 
 .card-info p {
@@ -144,35 +191,10 @@ a.navbar-brand {
 
 .card-info hr {
   margin: 1rem 0 0.5rem 0;
-  border-top: 1px solid #3f3f3f;
-}
-
-.card-info .links {
-  -ms-grid-column-align: end;
-      justify-self: end;
-  font-size: calc(0.8rem + 0.2vw);
-  text-align: right;
-  margin-right: 2rem;
-}
-
-.card-info .links i {
-  margin: 0.5rem;
-  -webkit-transition: 0.1s all ease-in-out;
-  transition: 0.1s all ease-in-out;
-}
-
-.card-info .links i:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .tech {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.tech .stack {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,26 +203,29 @@ a.navbar-brand {
       -ms-flex-direction: column;
           flex-direction: column;
   list-style: none;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
-.tech .stack .title {
-  color: black;
+.tech .title {
+  text-align: right;
+  color: white;
+  font-size: 1.2rem;
 }
 
-.tech .stack .list {
+.tech .list {
   padding: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  color: white;
 }
 
-.tech .stack .list li {
+.tech .list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +240,7 @@ a.navbar-brand {
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   padding: 0.2em 0.5em 0.2em 0.5em;
-  font-size: calc(1rem + 0.2vw);
+  font-size: calc(0.7rem + 0.2vw);
   margin: 0.2em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -225,22 +250,71 @@ a.navbar-brand {
           align-items: center;
 }
 
-.about-content {
+.links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.links-container .link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0.5rem 0 0.5rem;
+  border: 1px solid #0064c8;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  -webkit-transition: 0.15s all ease-in;
+  transition: 0.15s all ease-in;
+}
+
+.links-container .link a {
+  -webkit-transition: 0.15s all ease-in;
+  transition: 0.15s all ease-in;
+  text-decoration: none !important;
+}
+
+.links-container .link i {
+  -webkit-transition: 0.15s all ease-in;
+  transition: 0.15s all ease-in;
+  font-size: 0.9rem;
+  margin-right: 0.2rem;
+}
+
+.links-container .link:hover {
+  background: #0064c8;
+}
+
+.links-container .link:hover i {
+  color: white;
+}
+
+.links-container .link:hover a {
+  color: white;
+}
+
+.about .content {
   margin-top: 5em;
   text-align: center;
+  color: white;
 }
 
-.about-title {
-  font-size: 1.5em;
-}
-
-.about-profile p {
+.about .content .profile {
   text-align: left;
   font-family: "Noto Sans", sans-serif;
   font-size: calc(1em + 0.2vw);
 }
 
-.about-stack {
+.about .content .stack {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -255,7 +329,7 @@ a.navbar-brand {
           flex-direction: column;
 }
 
-.about-skills-wrapper {
+.about .content .stack .skill-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,7 +338,7 @@ a.navbar-brand {
           justify-content: center;
 }
 
-.about-skills {
+.about .content .stack .skill-list .skills {
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,7 +350,7 @@ a.navbar-brand {
           justify-content: center;
 }
 
-.about-skills li {
+.about .content .stack .skill-list .skills li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,6 +496,15 @@ a.navbar-brand {
           align-items: center;
 }
 
+.portfolio .subheader {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.portfolio p {
+  color: white;
+}
+
 .contact {
   padding: 1em;
   display: -webkit-box;
@@ -431,7 +514,6 @@ a.navbar-brand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #ffffff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -439,7 +521,7 @@ a.navbar-brand {
 
 .contact-message {
   text-align: center;
-  color: black;
+  color: white;
   margin-bottom: 1em;
 }
 
@@ -500,6 +582,7 @@ a.navbar-brand {
 }
 
 .input {
+  background: #cccccc;
   width: 100%;
   font-size: 1.2rem;
   font-family: Arial, Helvetica, sans-serif !important;
@@ -517,19 +600,19 @@ label {
           transform: translate(1em, 1em);
   pointer-events: none;
   position: absolute;
-  color: #999;
+  color: #2b2b38;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
 input:focus {
   outline: none;
-  border: 1px solid #0064c8;
+  border: 2px solid #0064c8;
 }
 
 textarea:focus {
   outline: none;
-  border: 1px solid #0064c8;
+  border: 2px solid #0064c8;
 }
 
 input:focus + label {
@@ -559,7 +642,7 @@ textarea:focus + label {
 }
 
 .email-message .success {
-  color: #0c5c10;
+  color: white;
 }
 
 .alternate-contact {
@@ -575,5 +658,15 @@ textarea:focus + label {
   bottom: 2em;
   right: 3em;
   height: 1em;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 /*# sourceMappingURL=style.css.map */

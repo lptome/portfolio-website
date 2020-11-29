@@ -1,26 +1,56 @@
 .project-card {
   padding: 2em 0 2em 0;
   justify-content: center;
-  title {
-    margin-bottom: 2rem;
-  }
 }
 
 .card-image {
-  padding: 2em 0 2em 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  .project-type {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    span {
+      font-size: 1.2rem;
+      font-family: "Roboto-Sans", sans-serif;
+      padding: 0 1rem;
+      color: $accentColor;
+      background: rgb(20, 20, 20);
+      border-top: 1px solid #070707;
+      border-right: 1px solid #070707;
+      border-left: 1px solid #070707;
+      border-bottom: 3px solid #070707;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+  }
   .container {
-    padding: 0;
-    border: 1px solid black;
-    width: 100%;
-    height: 100%;
     position: relative;
+    padding: 0;
     img {
+      border-radius: 0.5rem;
+      position: relative;
       width: 100%;
       height: 100%;
     }
   }
 }
 
+//Full image if on smaller screen
+@media screen and (max-width: 1200px) {
+  .card-image {
+    .container {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+//Make entire image act as anchor tag
 .box-link {
   width: 100%;
   height: 100%;
@@ -34,67 +64,95 @@
   }
 }
 
-//Project Description + Links
+//Project Description
 .card-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: left;
+  .title {
+    display: inline;
+    font-family: $headerFont;
+    color: $subheaderColor;
+    font-weight: 600;
+  }
   p {
     font-size: calc(0.8rem + 0.2vw);
   }
   hr {
     margin: 1rem 0 0.5rem 0;
-    border-top: 1px solid rgb(63, 63, 63);
-  }
-  .links {
-    justify-self: end;
-    font-size: calc(0.8rem + 0.2vw);
-    text-align: right;
-    margin-right: 2rem;
-    i {
-      margin: 0.5rem;
-      transition: 0.1s all ease-in-out;
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
   }
 }
 
 //Technologies used
 .tech {
-  justify-content: center;
-  .stack {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  .title {
+    text-align: right;
+    color: $headerColor;
+    font-size: 1.2rem;
+  }
+  .list {
+    padding: 0;
+    justify-content: right;
     display: flex;
-    flex-direction: column;
-    list-style: none;
-    .title {
-      color: black;
-    }
-    .list {
-      padding: 0;
-      justify-content: center;
+    flex-wrap: wrap;
+    li {
       display: flex;
-      flex-wrap: wrap;
-      color: white;
-      li {
-        display: flex;
-        background: rgb(15, 15, 15);
-        color: #0064c8;
-        border-top: 1px solid #070707;
-        border-right: 1px solid #070707;
-        border-left: 1px solid #070707;
-        border-bottom: 3px solid #070707;
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
-        border-top-right-radius: 3px;
-        border-top-left-radius: 3px;
-        padding: 0.2em 0.5em 0.2em 0.5em;
-        font-size: calc(1rem + 0.2vw);
-        margin: 0.2em;
-        justify-content: center;
-        align-items: center;
+      background: rgb(15, 15, 15);
+      color: #0064c8;
+      border-top: 1px solid #070707;
+      border-right: 1px solid #070707;
+      border-left: 1px solid #070707;
+      border-bottom: 3px solid #070707;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+      padding: 0.2em 0.5em 0.2em 0.5em;
+      font-size: calc(0.7rem + 0.2vw);
+      margin: 0.2em;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+//External links
+.links-container {
+  display: flex;
+  justify-content: end;
+  .link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem 0 0.5rem;
+    border: 1px solid #0064c8;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    transition: 0.15s all ease-in;
+    a {
+      transition: 0.15s all ease-in;
+      text-decoration: none !important;
+    }
+    i {
+      transition: 0.15s all ease-in;
+      font-size: 0.9rem;
+      margin-right: 0.2rem;
+    }
+    &:hover {
+      background: #0064c8;
+      i {
+        color: white;
+      }
+      a {
+        color: white;
       }
     }
   }

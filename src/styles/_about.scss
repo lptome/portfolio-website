@@ -1,53 +1,49 @@
-.about-content {
-  margin-top: 5em;
-  text-align: center;
-}
+.about {
+  .content {
+    margin-top: 5em;
+    text-align: center;
+    color: $paragraphColor;
+    .profile {
+      text-align: left;
+      font-family: "Noto Sans", sans-serif;
+      font-size: calc(1em + 0.2vw);
+    }
+    .stack {
+      justify-content: center;
+      text-align: center;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      .skill-list {
+        display: flex;
+        justify-content: center;
 
-.about-title {
-  font-size: 1.5em;
-}
-
-.about-profile p {
-  text-align: left;
-  font-family: "Noto Sans", sans-serif;
-  font-size: calc(1em + 0.2vw);
-}
-
-.about-stack {
-  justify-content: center;
-  text-align: center;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
-
-.about-skills-wrapper {
-  display: flex;
-  justify-content: center;
-}
-.about-skills {
-  padding: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.about-skills li {
-  display: flex;
-  background: rgb(15, 15, 15);
-  color: #0064c8;
-  border-top: 1px solid #070707;
-  border-right: 1px solid #070707;
-  border-left: 1px solid #070707;
-  border-bottom: 3px solid #070707;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  font-size: 1em;
-  margin: 0.2em;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
+        .skills {
+          padding: 1em;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          li {
+            display: flex;
+            background: rgb(15, 15, 15);
+            color: #0064c8;
+            border-top: 1px solid #070707;
+            border-right: 1px solid #070707;
+            border-left: 1px solid #070707;
+            border-bottom: 3px solid #070707;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            padding: 0.2em 0.5em 0.2em 0.5em;
+            font-size: 1em;
+            margin: 0.2em;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
 }

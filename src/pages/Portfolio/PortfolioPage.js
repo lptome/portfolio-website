@@ -11,7 +11,7 @@ class PortfolioPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "PROJECTS",
+      title: "Projects",
     };
   }
   render() {
@@ -27,9 +27,9 @@ class PortfolioPage extends React.Component {
         <div className="portfolio">
           <div className="row portfolio-subtitle mt-4 d-flex justify-content-center">
             <div className="col-12 text-center">
-              <p style={{ fontSize: "1.5em" }}>
-                Here are some projects I've worked on recently:
-              </p>
+              <h2 className="subheader">
+                Here are some projects I've worked on recently
+              </h2>
             </div>
           </div>
           <Projects />
